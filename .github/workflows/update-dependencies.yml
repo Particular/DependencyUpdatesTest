@@ -1,0 +1,9 @@
+name: Update dependencies
+on:
+  workflow_dispatch:
+env:
+  DOTNET_NOLOGO: true
+jobs:
+  update-dependencies:
+    uses: particular/version-monkey-action/.github/workflows/run-version-monkey.yml
+    secrets: inherit
