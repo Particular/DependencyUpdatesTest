@@ -5,5 +5,5 @@ env:
   DOTNET_NOLOGO: true
 jobs:
   update:
-    uses: particular/version-monkey-action/.github/workflows/run-version-monkey.yml@main
+    uses: particular/dependency-updates-action/.github/workflows/run-dependency-updates.yml@main
     secrets: inherit
