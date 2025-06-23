@@ -1,9 +1,19 @@
 name: Update dependencies
 on:
   workflow_dispatch:
+    inputs:
+      command:
+        description: The update for the dependency updater application to perform 
+        type: choice
+        required: true
+        options:
+          - update
+          
 env:
   DOTNET_NOLOGO: true
 jobs:
   update:
     uses: particular/dependency-updates-action/.github/workflows/run-dependency-updates.yml@main
     secrets: inherit
+    with:
+      command: ${{ inputs.command }}
