@@ -13,7 +13,7 @@ env:
   DOTNET_NOLOGO: true
 jobs:
   update:
-    uses: particular/dependency-updates-action/.github/workflows/run-dependency-updates.yml@main
+    uses: particular/dependency-updates-action/.github/workflows/run-dependency-updates.yml@update-command
     secrets: inherit
     with:
       command: ${{ inputs.command }}
